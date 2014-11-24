@@ -5,4 +5,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="broadcast_intent">Broadcast Intent</string>
+    <string name="pushActivity">Push to Parse.com</string>
+    <string name="ViewList">View all items pushed to Parse.com</string>
+
 </resources>
