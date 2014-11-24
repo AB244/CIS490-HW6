@@ -34,7 +34,7 @@ public class PushFragment extends Fragment {
                 ParseObject pushedText = new ParseObject("PushedText");
                 pushedText.put("form1", pushText);
                 pushedText.saveInBackground();
-                Toast toast = Toast.makeText(getActivity(), "Text pushed to Parse.com", Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(getActivity(), "Items pushed to Parse.com.", Toast.LENGTH_LONG);
                 toast.show();
                 ((EditText) getView().findViewById(R.id.pushText)).setText("");
             }
