@@ -1,6 +1,7 @@
 package com.cis490.alex.hw6;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,14 +9,16 @@ import android.view.View;
 
 import com.parse.Parse;
 import com.parse.ParseObject;
+import com.parse.PushService;
 
 
 public class MainActivity extends Activity {
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Parse.initialize(this, "CFCV42kqtAgS9yjNeG7s6ItxO22l7dutZZOm0Z8Z", "bVO1GGEh3GDuDaxiLjQWppe3mEOnv9mp3S3zUsBp");
+        // Also in this method, specify a default Activity to handle push notifications
+        PushService.setDefaultPushCallback(this, MainActivity.class);
         ParseObject testObject = new ParseObject("TestObject");
         testObject.put("foo", "bar");
         testObject.saveInBackground();
